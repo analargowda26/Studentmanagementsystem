@@ -1,0 +1,68 @@
+/* Main container */
+.edit-student-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.form-title {
+  text-align: center;
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* Form layout */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Label and input fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+}
+
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.3);
+}
+
+/* Update button */
+.update-btn {
+  background-color: #FF4F81;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn:hover {
+  background-color:  yellowgreen;
+}
