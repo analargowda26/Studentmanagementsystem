@@ -6,6 +6,32 @@ const Table = () => {
   const [students, setStudents] = useState([]);
   const navigate = useNavigate();
 
+  async function handleDelete(id) {
+    console.log("The function as been called")
+    if (window.confirm("Are you sure you want to delete this student?")) {
+      try {
+        const response = await fetch(
+          `http://localhost:3000/api/student/${id}`,
+          {
+            method: "DELETE",
+          }
+        );
+
+        const data = await response.json();
+
+        if (data.success) {
+          alert("Student deleted successfully!");
+          FetchStudents();
+        } else {
+          alert("Failed to delete student");
+        }
+      } catch (error) {
+        console.error("Error deleting student", error);
+        alert("Failed to delete student");
+      }
+    }
+  }
+
   async function FetchStudents() {
     try {
       const response = await fetch("http://localhost:3000/api/students");
@@ -63,7 +89,12 @@ const Table = () => {
                     >
                       Edit
                     </button>
-                    <button className="delete-btn">Delete</button>
+                    <button 
+                    className="delete-btn"
+                    onClick={() => handleDelete(student._id)}
+                    >
+                    Delete
+                    </button>
                   </td>
                 </tr>
               ))

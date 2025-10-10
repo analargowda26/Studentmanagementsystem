@@ -3,7 +3,6 @@ import "./App.css";
 import Table from "./components/table";
 import CreateStudent from "./components/CreateStudent";
 import EditStudent from "./components/EditStudent"
-import DeleteStudent from "./components/DeleteStudent"
 
 function App() {
   return (
@@ -29,14 +28,6 @@ function App() {
       element = {
         <div className = "app-container">
           <EditStudent />
-        </div>
-      }
-      />
-      <Route
-      path = "/delete-student/:id"
-      element = {
-        <div className = "app-container">
-          <DeleteStudent/>
         </div>
       }
       />
